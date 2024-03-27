@@ -2,6 +2,12 @@
 
 
 
+
+void LexicalAnalysis::addToTable(LexicalAnalysis::Token &token) {
+    symbolTable.insert(std::make_pair(token.name,token));
+
+}
+
 std::string LexicalAnalysis::getTokens(std::string input) {
     int position = 0;
     std::smatch match;
@@ -79,7 +85,7 @@ std::string LexicalAnalysis::getTokens(std::string input) {
 
 int main() {
    
-    std::string text = " int korkor =5; \n float mou=030; \n float result=korkor + mou ";
+    std::string text = " int korkor =5; \n float mou=0x30; \n float result=korkor + mou  ";
     
 
 
