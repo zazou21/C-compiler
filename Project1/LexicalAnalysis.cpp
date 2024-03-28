@@ -69,6 +69,7 @@ void read_file(std::string filepath, std::string& buffer) {
         buffer.push_back('\n');
         buffer += line;
     }
+    file.close();
 }
 
 int main() {
